@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="stilo.css">
+<scrpit src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scrpit>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Vamos calcular a renda Per capital sem refresh</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="Pegar.js"> 
+    </script>
+</head>
+<body>
+                  <section class="hero-banner text-center">
+                    <div class="container">
+                      <h1>Vamos calcular seu perCapital?</h1>
+                      <p class="hero-subtitle">A consulta do cep e feito atraves da api "Via Cep".  </p>
+                    </div>
+                  </section>
+        <legend style="text-align: center" >Informe seus dados abaixo:</legend>
+        <form method="GET"action=".">   
+        <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Nome (opcional)</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" value="" id="nome">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-search-input" class="col-2 col-form-label">Renda Mensal</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" value="" id="valor"onblur="calcular()"required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-email-input" class="col-2 col-form-label">Nº de dependentes</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" value="" id="quantidade"onblur="calcular()"required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-tel-input" class="col-2 col-form-label">Informe seu CEP</label>
+                <div class="col-10">
+                    <input class="form-control" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value);">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-password-input" class="col-2 col-form-label">Rua</label>
+                <div class="col-10">
+                        <input class="form-control" type="text" id="rua" value='' readonly>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">Bairro</label>
+                <div class="col-10">
+                        <input class="form-control" type="text" id="bairro" value='' readonly>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-datetime-local-input" class="col-2 col-form-label">cidade</label>
+                <div class="col-10">
+                        <input class="form-control" type="text" id="cidade" value='' readonly>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">UF</label>
+                <div class="col-10">
+                    <input  class="form-control"type="text" id="uf" value='' readonly>
+                               </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-month-input" class="col-2 col-form-label">IBGE</label>
+                <div class="col-10">
+                        <input class="form-control" type="text" id="ibge" value='' readonly >
+                </div>
+              </div>
+              <div class="form-group row">
+                    <label for="example-url-input" class="col-2 col-form-label">Valor por quantidade</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text"  id="var_qnt" value='' readonly>
+                    </div>
+                  </div>
+    </form>
+    <footer class="footer-area section-gap">
+            <div class="container">
+                       </div>
+                 </div>
+        </footer>
+</body>
+</html>

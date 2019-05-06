@@ -1,0 +1,25 @@
+input{
+    max-width: 450px;
+    left: 50%;
+    position: center;
+}
+form{
+text-align: center;
+top: 50%;
+left:100px;
+}
+h2{
+    position: center;
+    color: lavender;
+}
+body{
+background-image: url(background2.jpg);
+    font-size: -3px;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+}
+label {
+    font-size: 15px;
+    font-weight: _font(weight-bold);
+    font-family: Arial, Helvetica, sans-serif;
+}
